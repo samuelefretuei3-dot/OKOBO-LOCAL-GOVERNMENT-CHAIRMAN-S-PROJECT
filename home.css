@@ -1,0 +1,333 @@
+
+/* =================================
+   GALLERY INTRODUCTION
+================================= */
+
+.gallery-intro {
+    width: min(850px, 90%);
+    margin: auto;
+    padding: 75px 0 35px;
+    text-align: center;
+}
+
+.gallery-intro h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.gallery-intro h2 span {
+    color: var(--green);
+}
+
+.gallery-intro > p:last-child {
+    color: var(--text);
+    line-height: 1.9;
+}
+
+
+/* =================================
+   PROJECT SECTION
+================================= */
+
+.projects-section {
+    padding: 60px 0 95px;
+    background: var(--light);
+}
+
+.projects-grid {
+    width: min(1150px, 90%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    border: 1px solid #eeeeee;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+.project-category {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+
+    background: var(--gold);
+    color: var(--dark);
+
+    padding: 7px 12px;
+    border-radius: 4px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--light-gold);
+    color: var(--green);
+
+    border-radius: 50%;
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    color: var(--dark-green);
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 12px;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.project-status.completed {
+    color: #087443;
+    background: #e6f5ec;
+}
+
+.project-status.ongoing {
+    color: #9a6900;
+    background: #fff2cf;
+}
+
+
+/* =================================
+   CHAIRMAN FEATURE
+================================= */
+
+.gallery-chairman {
+    padding: 85px 0;
+    background: white;
+}
+
+.gallery-chairman-content {
+    width: min(1100px, 90%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.gallery-chairman-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 12px;
+    box-shadow: 12px 12px 0 var(--light-gold);
+}
+
+.gallery-chairman-text h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    color: var(--dark);
+    line-height: 1.3;
+    margin: 12px 0 20px;
+}
+
+.gallery-chairman-text h2 span {
+    color: var(--green);
+}
+
+.gallery-chairman-text h3 {
+    color: var(--green);
+    font-size: 22px;
+}
+
+.gallery-chairman-text p {
+    color: var(--text);
+    margin: 7px 0;
+}
+
+.gallery-chairman-text .green-button {
+    margin-top: 25px;
+}
+
+
+/* =================================
+   GALLERY VISION
+================================= */
+
+.gallery-vision {
+    padding: 80px 20px;
+    text-align: center;
+
+    background: var(--dark-green);
+    color: white;
+}
+
+.gallery-vision .section-small {
+    color: var(--gold);
+}
+
+.gallery-vision h2 {
+    font-size: clamp(27px, 4vw, 40px);
+    margin-bottom: 18px;
+}
+
+.gallery-vision h2 span {
+    color: var(--gold);
+}
+
+.gallery-vision > p:last-child {
+    width: min(750px, 95%);
+    margin: auto;
+    color: #e4e4e4;
+    line-height: 1.9;
+}
+
+
+/* =================================
+   RESPONSIVE TABLETS
+================================= */
+
+@media (max-width: 950px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-chairman-content {
+        gap: 30px;
+    }
+
+}
+
+
+/* =================================
+   RESPONSIVE MOBILE
+================================= */
+
+@media (max-width: 650px) {
+
+    .gallery-intro {
+        padding-top: 55px;
+    }
+
+    .projects-section {
+        padding: 50px 0 65px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        width: 88%;
+        gap: 25px;
+    }
+
+    .project-image {
+        height: 230px;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .gallery-chairman {
+        padding: 60px 0;
+    }
+
+    .gallery-chairman-content {
+        grid-template-columns: 1fr;
+        width: 88%;
+        gap: 35px;
+    }
+
+    .gallery-chairman-image img {
+        height: 320px;
+    }
+
+    .gallery-chairman-text {
+        text-align: center;
+    }
+
+    .gallery-vision {
+        padding: 60px 20px;
+    }
+
+}
+
+
+/* =================================
+   EXTRA SMALL PHONES
+================================= */
+
+@media (max-width: 350px) {
+
+    .project-content h3 {
+        font-size: 18px;
+    }
+
+    .project-content p {
+        font-size: 13px;
+    }
+
+    .project-category {
+        font-size: 9px;
+    }
+
+    .gallery-chairman-image img {
+        height: 260px;
+    }
+
+}
